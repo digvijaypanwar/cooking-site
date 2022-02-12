@@ -12,7 +12,7 @@ function Create() {
     const ingredientInput = useRef(null);
     const history = useHistory();
 
-    const { postData, data, error } = useFetch(
+    const { postData, data } = useFetch(
         "http://localhost:3000/recipes",
         "POST"
     );
