@@ -11,11 +11,11 @@ function Recipe() {
         error,
     } = useFetch("http://localhost:3000/recipes/" + id);
 
-    // useEffect(() => {
-    //     if (error) {
-    //         history.push("/");
-    //     }
-    // }, [error, history]);
+    useEffect(() => {
+        if (error) {
+            history.push("/");
+        }
+    }, [error, history]);
 
     return (
         <div className="recipe">
