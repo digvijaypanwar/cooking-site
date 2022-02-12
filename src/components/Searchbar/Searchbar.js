@@ -7,8 +7,10 @@ function Searchbar() {
     const history = useHistory();
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        history.push(`/search?q=${term}`);
+        const query = term.trim();
+        if (query) {
+            history.push(`/search?q=${term.trim()}`);
+        }
         setTerm("");
     };
     return (
